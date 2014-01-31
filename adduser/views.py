@@ -12,3 +12,19 @@ def detail(request, user_id):
     return render(request, 'adduser/detail.html', {'userdetail': userdetail})
 
 
+from adduser.forms import UserForm
+from django.contrib.auth import login
+from django.http import HttpResponseRedirect
+
+def addnewuser(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            UserForm.save()
+            return HttpResponseRedirect('index')
+    else:
+        form = UserForm()
+
+    return render(request, 'adduser/addnewuser.html', {'form': form})
+
+
