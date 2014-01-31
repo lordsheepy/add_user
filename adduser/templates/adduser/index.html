@@ -1,7 +1,7 @@
 {% if user_list %}
     <ul>
     {% for user in user_list %}
-        <li><a href="adduser/{{ user.id }}/">{{ user.first_name }}</a></li>
+        <li><a href="{% url 'adduser:detail' user.id %}">{{ user.first_name }} {{ user.last_name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
