@@ -3,3 +3,4 @@
 <p> {{ userdetail.email }}</p>
 <p><a href="{% url 'adduser:edituser' userdetail.id %}"> Edit user details</a></p>
 <p><a href="{% url 'adduser:deluser' userdetail.id %}"> Delete user</a></p>
+<p><a href="{% url 'adduser:index' %}"> Return to user list</a></p>
