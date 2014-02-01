@@ -1,21 +1,21 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse
-from adduser.models import User
+from django.shortcuts import render, render_to_response
+from django.http import HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from adduser.models import User
+from adduser.forms import UserForm
 
 def index(request):
     user_list = User.objects.all().order_by('last_name')
     context = {'user_list': user_list}
     return render(request, 'adduser/index.html', context)
 
+
 def detail(request, user_id):
-    userdetail = get_object_or_404(User, pk=user_id)
+    userdetail = User.objects.get(pk=user_id)
     return render(request, 'adduser/detail.html', {'userdetail': userdetail})
 
 
-from adduser.forms import UserForm
-from django.contrib.auth import login
-from django.http import HttpResponseRedirect
+
 
 @csrf_exempt
 def addnewuser(request):
@@ -28,5 +28,11 @@ def addnewuser(request):
         form = UserForm()
 
     return render(request, 'adduser/addnewuser.html', {'form': form})
+
+def edituser(request, user_id):
+    user_instance = User.objects.get(pk=user_id)
+    data = {'first_name' : user_instance.first_name, 'last_name' : user_instance.last_name, 'email' : user_instance.email}
+    form = UserForm(initial=data)
+    return render_to_response(request, 'adduser/edituser.html', {'form': form})
 
 
