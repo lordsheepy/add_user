@@ -1,5 +1,5 @@
 <!DOCTYPE html>
 <h1>{{ userdetail.first_name }} {{ userdetail.last_name }}</h1>
 <p> {{ userdetail.email }}</p>
-<p><a href="{% url 'adduser:edituser' user.id %}"> Edit user details</a></p>
-
+<p><a href="{% url 'adduser:edituser' userdetail.id %}"> Edit user details</a></p>
+<p><a href="{% url 'adduser:deluser' userdetail.id %}"> Delete user</a></p>
