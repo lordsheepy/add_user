@@ -52,7 +52,7 @@
       <file leaf-file-name="Procfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="39" selection-start="99" selection-end="99" vertical-scroll-proportion="0.055350553" vertical-offset="0" max-vertical-offset="542">
+            <state line="1" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="0.027675277" vertical-offset="0" max-vertical-offset="542">
               <folding />
             </state>
           </provider>
@@ -622,7 +622,11 @@
       <created>1391380675843</created>
       <updated>1391380675843</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Procfile correction">
+      <created>1391380826904</created>
+      <updated>1391380826904</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -818,7 +822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="99" selection-end="99" vertical-scroll-proportion="0.055350553" vertical-offset="0" max-vertical-offset="542">
+        <state line="1" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="0.027675277" vertical-offset="0" max-vertical-offset="542">
           <folding />
         </state>
       </provider>
