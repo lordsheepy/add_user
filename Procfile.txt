@@ -1,2 +1,0 @@
-web: gunicorn add_user.wsgi
-#what's wrong with this?
