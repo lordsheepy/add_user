@@ -1,1 +1,1 @@
-web: gunicorn add_user.wsgi:application
+web: gunicorn add_user.wsgi
